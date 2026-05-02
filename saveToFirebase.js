@@ -1,15 +1,14 @@
-function saveToFirebase(email) {
-    var emailObject = {
-        email: email
-    };
+import { getDatabase, ref, push }
+  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
-    firebase.database().ref('subscription-entries').push().set(emailObject)
-        .then(function(snapshot) {
-            success(); // some success method
-        }, function(error) {
-            console.log('error' + error);
-            error(); // some error method
-        });
+/**
+ * Saves an email to Firebase Realtime Database
+ */
+export function saveToFirebase(email) {
+  const database = getDatabase();
+
+  return push(ref(database, "subscription-entries"), {
+    email: email,
+    createdAt: Date.now()
+  });
 }
-
-saveToFirebase(email);
