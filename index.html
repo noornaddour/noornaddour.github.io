@@ -2,92 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+  <title>Subscribe</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Optional styling (safe to remove) -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    .container {
+      max-width: 400px;
+      margin: 60px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 6px;
+    }
+    header {
+      text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Hi, I’m Jane Doe</h1>
-    <p>iOS Developer | Swift Enthusiast | Problem Solver</p>
-  </header>
-
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I build apps with SwiftUI, CloudKit, and Python automation.
-        I love teaching and sharing what I learn.
-      </p>
-    </section>
-
-    <section>
-      <img src="Asset 1.png" alt="My image" style="max-width: 40%; height: auto;">
-    </section>
-
-    
   <div class="container">
-      <header class="header">
-        This Marketing Site Is Sick!!
-      </header>
-  
-      <form class="form-signin" id="subscribeForm">
-        <h2 class="form-signin-heading">
-          Subscribe to our mailing list!
-        </h2>
-  
-        <label for="inputEmail" class="sr-only">
-          Email address
-        </label>
-  
-        <input
-          type="email"
-          id="inputEmail"
-          class="form-control"
-          placeholder="Email address"
-          required
-        >
-  
-        <button
-          class="btn btn-lg btn-primary btn-block"
-          type="submit"
-        >
-          Subscribe!
-        </button>
-      </form>
-    </div>
-      
+    <header>This Marketing Site Is Sick!!</header>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>TapDuel</strong> – Multiplayer reflex game built with GameKit
-        </li>
-      </ul>
-    </section>
-  </main>
+    <form id="subscribeForm">
+      <h2>Subscribe to our mailing list!</h2>
 
-  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
-  <script>
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var config = {
-    apiKey: "AIzaSyBNSXl3WT0Ms1Arm8G9PS29HDqfUPJL5Vc",
-    authDomain: "proto-lite.firebaseapp.com",
-    projectId: "proto-lite",
-    storageBucket: "proto-lite.firebasestorage.app",
-    messagingSenderId: "38747716907",
-    appId: "1:38747716907:web:95fec900476369e42dd96e",
-    measurementId: "G-7WTSPTD6PZ"
-  };
-  firebase.initializeApp(config);
+      <label for="inputEmail">Email address</label>
+      <input
+        type="email"
+        id="inputEmail"
+        placeholder="Email address"
+        required
+      />
+
+      <button type="submit">Subscribe!</button>
+    </form>
+  </div>
+
+  <!-- Firebase v10 + app wiring -->
+  <script type="module">
+    import { initializeApp } 
+      from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+
+    import { saveToFirebase } 
+      from "./saveToFirebase.js";
+
+    // 🔁 Replace with YOUR Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyBNSXl3WT0Ms1Arm8G9PS29HDqfUPJL5Vc",
+      authDomain: "proto-lite.firebaseapp.com",
+      projectId: "proto-lite",
+      storageBucket: "proto-lite.firebasestorage.app",
+      messagingSenderId: "38747716907",
+      appId: "1:38747716907:web:95fec900476369e42dd96e",
+      measurementId: "G-7WTSPTD6PZ"
+    };
+
+    // Initialize Firebase
+    initializeApp(firebaseConfig);
+
+    const form = document.getElementById("subscribeForm");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault(); // ✅ stop reload
+
+      const email = document.getElementById("inputEmail").value;
+
+      saveToFirebase(email)
+        .then(() => {
+          alert("Subscribed successfully!");
+          form.reset();
+        })
+        .catch((error) => {
+          console.error(error);
+          alert("Failed to subscribe");
+        });
+    });
   </script>
 
-  <script type="module" src="saveToFirebase.js"><\script>
-
-  
 </body>
 </html>
