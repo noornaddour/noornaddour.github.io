@@ -74,3 +74,16 @@ body {
     gap: 1.5rem;
   }
 }
+
+/* Basic CSS for a scrollable carousel */
+.carousel-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+  scroll-snap-align: center;
+  flex: 0 0 100%; /* Show one item at a time */
+}
+
