@@ -4,13 +4,13 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
+  background: #222846;
+  color: #FFFFFF;
 }
 
 header {
-  background: #24292f;
-  color: #fff;
+  background: #ECCA98;
+  color: #333333;
   padding: 2rem;
   text-align: center;
 }
@@ -24,8 +24,8 @@ main {
 }
 
 footer {
-  background: #24292f;
-  color: white;
+  background: #5F8FFB;
+  color: #ECCA98;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
