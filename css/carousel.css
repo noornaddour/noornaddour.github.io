@@ -32,12 +32,12 @@ body {
   display: block;
 }
 
-/* Caption overlay */
+/* Caption overlay  translateX(-50%) */
 .carousel-caption {
   position: absolute;
   bottom: 50px;
   left: 20%;
-  transform: translateX(-50%);
+  transform: none;
   background: rgba(0, 0, 0, 0.6);
   padding: 12px 20px;
   border-radius: 4px;
