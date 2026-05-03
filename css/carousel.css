@@ -1,3 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Carousel container */
+.carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+/* Track */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Slide */
 .carousel-slide {
   position: relative; /* REQUIRED for overlay */
   min-width: 100%;
@@ -21,7 +45,7 @@
 }
 
 .carousel-caption a {
-  color: #ffffff;
+  color: #fff;
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
@@ -29,4 +53,49 @@
 
 .carousel-caption a:hover {
   text-decoration: underline;
+}
+
+/* Arrows */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background: #ffffff;
 }
