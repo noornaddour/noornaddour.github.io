@@ -55,4 +55,27 @@ body {
 .carousel-btn:hover {
   background: rgba(0,0,0,0.8);
 }
-``
+/* Dots container */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+/* Individual dot */
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Active dot */
+.carousel-dot.active {
+  background: #ffffff;
+}
