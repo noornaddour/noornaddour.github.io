@@ -1,105 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
-  <meta charset="UTF-8" />
-  <title>Subscribe Test branch</title>
-
+  <meta charset="utf-8" />
+  <title>KPMG‑Inspired Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Optional styling (safe to remove) -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-    }
-    .container {
-      max-width: 400px;
-      margin: 60px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 6px;
-    }
-    header {
-      text-align: center;
-      font-size: 1.4rem;
-      margin-bottom: 20px;
-    }
-    input, button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-    }
-    button {
-      background: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
-
 <body>
 
-  <div class="container">
-    <header>This Marketing Site Is Sick!!</header>
+<a href="#main" class="skipnav">Skip to main content</a>
 
-    <form id="subscribeForm">
-      <h2>Subscribe to our mailing list on test branch!</h2>
-
-      <label for="inputEmail">Email address</label>
-      <input
-        type="email"
-        id="inputEmail"
-        placeholder="Email address"
-        required
-      />
-
-      <button type="submit">Subscribe!</button>
-    </form>
+<!-- ================= HEADER ================= -->
+<header class="cmp-header">
+  <div class="container utils-padding-horizontal--base">
+    <div class="cmp-header__logo">
+      <img src="assets/images/dolphin.png" alt="Logo" />
+    </div>
   </div>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
-  <!-- Firebase v10 + app wiring -->
-  <script type="module">
-    import { initializeApp } 
-      from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+</header>
 
-    import { saveToFirebase } 
-      from "./saveToFirebase.js";
+<!-- ================= MAIN ================= -->
+<main id="main">
 
-    // 🔁 Replace with YOUR Firebase config
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyBNSXl3WT0Ms1Arm8G9PS29HDqfUPJL5Vc",
-      authDomain: "proto-lite.firebaseapp.com",
-      databaseURL: "https://proto-lite-default-rtdb.asia-southeast1.firebasedatabase.app",
-      projectId: "proto-lite",
-      storageBucket: "proto-lite.firebasestorage.app",
-      messagingSenderId: "38747716907",
-      appId: "1:38747716907:web:95fec900476369e42dd96e",
-      measurementId: "G-7WTSPTD6PZ"
-    };
+  <!-- ===== HERO SECTION ===== -->
+  <section class="section utils-background-grey-100 utils-padding-vertical--large">
+    <div class="container cmp-hero">
+      <div>
+        <h1 class="cmp-hero__title">Insight‑Driven Futures</h1>
+        <p>Adapting the structural layout of kpmg.html with a single visual asset.</p>
+      </div>
+      <img src="assets/images/dolphin.png" alt="Hero Image" />
+    </div>
+  </section>
 
-    // Initialize Firebase
-    initializeApp(firebaseConfig);
+  <!-- ===== FEATURED INSIGHTS ===== -->
+  <section class="section utils-padding-vertical--large">
+    <div class="container columncontrol threeEven">
 
-    const form = document.getElementById("subscribeForm");
+      <article class="cmp-teaser">
+        <img src="assets/images/dolphin.png" alt="" />
+        <div class="cmp-teaser__content">
+          <h3 class="cmp-teaser__title">Insight One</h3>
+          <p>Teaser content structure matching KPMG.</p>
+        </div>
+      </article>
 
-    form.addEventListener("submit", (event) => {
-      event.preventDefault(); // ✅ stop reload
+      <article class="cmp-teaser">
+        <img src="assets/images/dolphin.png" alt="" />
+        <div class="cmp-teaser__content">
+          <h3 class="cmp-teaser__title">Insight Two</h3>
+          <p>Reusable single asset image.</p>
+        </div>
+      </article>
 
-      const email = document.getElementById("inputEmail").value;
+      <article class="cmp-teaser">
+        <img src="assets/images/dolphin.png" alt="" />
+        <div class="cmp-teaser__content">
+          <h3 class="cmp-teaser__title">Insight Three</h3>
+          <p>Grid system mirrors kpmg.html.</p>
+        </div>
+      </article>
 
-      saveToFirebase(email)
-        .then(() => {
-          alert("Subscribed successfully!");
-          form.reset();
-        })
-        .catch((error) => {
-          console.error(error);
-          alert("Failed to subscribe");
-        });
-    });
-  </script>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="cmp-footer">
+  <div class="container">
+    <p>© 2026 Demo Site · Structure inspired by kpmg.html</p>
+  </div>
+</footer>
 
 </body>
 </html>
