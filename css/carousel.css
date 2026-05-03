@@ -1,29 +1,5 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-/* Carousel container */
-.carousel {
-  position: relative;
-  max-width: 900px;
-  margin: 50px auto;
-  overflow: hidden;
-}
-
-/* Track */
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-/* Slides */
 .carousel-slide {
-  position: relative;
+  position: relative; /* REQUIRED for overlay */
   min-width: 100%;
 }
 
@@ -32,7 +8,7 @@ body {
   display: block;
 }
 
-/* Caption / title overlay */
+/* Caption overlay */
 .carousel-caption {
   position: absolute;
   bottom: 50px;
@@ -41,6 +17,7 @@ body {
   background: rgba(0, 0, 0, 0.6);
   padding: 12px 20px;
   border-radius: 4px;
+  z-index: 2;
 }
 
 .carousel-caption a {
@@ -52,47 +29,4 @@ body {
 
 .carousel-caption a:hover {
   text-decoration: underline;
-}
-
-/* Buttons */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  border: none;
-  padding: 12px;
-  cursor: pointer;
-  font-size: 24px;
-}
-
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
-}
-
-/* Dots */
-.carousel-dots {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
-
-.carousel-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.5);
-  cursor: pointer;
-}
-
-.carousel-dot.active {
-  background: #ffffff;
 }
