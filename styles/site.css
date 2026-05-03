@@ -1,0 +1,138 @@
+/* ===============================
+   Base / Reset
+   =============================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #222;
+}
+
+/* ===============================
+   Utility classes (KPMG-inspired)
+   =============================== */
+.utils-padding-horizontal--base {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.utils-padding-vertical--large {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.utils-background-grey-100 {
+  background-color: #f5f5f5;
+}
+
+.utils-background-cobalt-blue {
+  background-color: #00338d;
+  color: white;
+}
+
+.dark-theme {
+  color: white;
+}
+
+/* ===============================
+   Layout system
+   =============================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.responsivegrid {
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+}
+
+/* ===============================
+   Header
+   =============================== */
+.cmp-header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.cmp-header__logo img {
+  height: 40px;
+}
+
+/* ===============================
+   Hero
+   =============================== */
+.cmp-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.cmp-hero img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.cmp-hero__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ===============================
+   Teasers
+   =============================== */
+.cmp-teaser {
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cmp-teaser img {
+  width: 100%;
+}
+
+.cmp-teaser__content {
+  padding: 1rem;
+}
+
+.cmp-teaser__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===============================
+   Columns (KPMG columncontrol)
+   =============================== */
+.columncontrol {
+  display: grid;
+  gap: 2rem;
+}
+
+.columncontrol.twoEven {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.columncontrol.threeEven {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ===============================
+   Footer
+   =============================== */
+.cmp-footer {
+  background: #00338d;
+  color: white;
+  padding: 3rem 1rem;
+}
+
+.cmp-footer a {
+  color: white;
+  text-decoration: none;
+}
