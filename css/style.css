@@ -5,14 +5,24 @@
   box-sizing: border-box;
 }
 
-html, body {
+body {
+  font-family: 'Times New Roman', Times, serif;
   margin: 0;
-  font-family: "Open Sans", Arial, sans-serif;
-  color: #222;
+  padding: 0;
+  line-height: 1.6;
+  background: #222846;
+  color: #FFFFFF;
+}
+
+header {
+  background: #ECCA98;
+  color: #333333;
+  padding: 2rem;
+  text-align: center;
 }
 
 /* ===============================
-   Utility classes (KPMG-inspired)
+   Utility classes
    =============================== */
 .utils-padding-horizontal--base {
   padding-left: 1rem;
@@ -25,16 +35,16 @@ html, body {
 }
 
 .utils-background-grey-100 {
-  background-color: #f5f5f5;
+  background-color: #222846;
 }
 
 .utils-background-cobalt-blue {
-  background-color: #00338d;
-  color: white;
+  background-color: #5F8FFB;
+  color: #333333;
 }
 
 .dark-theme {
-  color: white;
+  color: #222846;
 }
 
 /* ===============================
@@ -57,7 +67,7 @@ html, body {
    Header
    =============================== */
 .cmp-header {
-  background: white;
+  background: #222846;
   border-bottom: 1px solid #ddd;
 }
 
@@ -108,7 +118,7 @@ html, body {
 }
 
 /* ===============================
-   Columns (KPMG columncontrol)
+   Columns (columncontrol)
    =============================== */
 .columncontrol {
   display: grid;
