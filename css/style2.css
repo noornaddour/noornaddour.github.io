@@ -1,0 +1,134 @@
+/* =========================================
+   KPMG-inspired Article Styling
+   File: css/style2.css
+========================================= */
+
+:root {
+    --kpmg-blue: #00338d;
+    --kpmg-light-blue: #e6effa;
+    --text-dark: #1a1a1a;
+    --text-muted: #666;
+    --border-light: #e0e0e0;
+    --content-width: 820px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--text-dark);
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+    border-bottom: 1px solid var(--border-light);
+    padding: 20px 40px;
+}
+
+.site-header h1 {
+    margin: 0;
+    color: var(--kpmg-blue);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* ---------- Hero Image ---------- */
+
+.hero {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------- Article Container ---------- */
+
+.main-content {
+    max-width: var(--content-width);
+    margin: 60px auto;
+    padding: 0 24px;
+}
+
+.article-meta {
+    margin-bottom: 32px;
+}
+
+.article-meta .category {
+    color: var(--kpmg-blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.article-meta h2 {
+    margin: 12px 0;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.article-meta .date {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* ---------- Article Body ---------- */
+
+article section {
+    margin-bottom: 48px;
+}
+
+article h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+article p {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+/* ---------- Inline Images ---------- */
+
+.article-image {
+    margin: 32px 0;
+}
+
+.article-image img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* ---------- Quote Block ---------- */
+
+.quote {
+    border-left: 4px solid var(--kpmg-blue);
+    padding-left: 20px;
+    font-style: italic;
+    color: var(--text-muted);
+    margin: 40px 0;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    background-color: var(--kpmg-light-blue);
+    margin-top: 80px;
+    padding: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+``
