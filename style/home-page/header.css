@@ -52,3 +52,28 @@ nav a:hover {
   height: 36px;
   display: block;
 }
+
+/* Desktop default */
+.menu-toggle { display: none; }
+
+@media (max-width: 768px) {
+  .header-inner { display: flex; justify-content: space-between; }
+  
+  .menu-toggle { display: block; font-size: 24px; cursor: pointer; }
+
+  .nav-links {
+    display: none; /* Hide it initially */
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+	transition: max-height 0.4s ease, opacity 0.3s ease; /* The animation */
+  }
+
+  /* When JS adds this class, the menu appears */
+  .nav-links.show {
+    display: flex;
+  }
+}
