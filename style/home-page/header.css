@@ -15,7 +15,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 16px 32px;
 }
 
@@ -36,7 +36,7 @@ nav {
 
 /* Navigation links */
 nav a {
-  color: #ffffff;
+  color: #222846;
   text-decoration: none;
   font-weight: 600;
   font-size: 15px;
