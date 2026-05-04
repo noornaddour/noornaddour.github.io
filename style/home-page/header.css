@@ -20,14 +20,14 @@ html {
 /* Base page styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* Header container */
 header {
   position: sticky;
   top: 0;
-  background-color: #1d2b52;
+  background-color: #FFFFFF;
   padding: 16px 32px;
   z-index: 100;
 }
