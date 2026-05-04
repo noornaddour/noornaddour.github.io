@@ -3,19 +3,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Tablet & below */
-@media (max-width: 1024px) {
-  nav {
-    gap: 16px;
-  }
-}
-
-/* Phone */
-@media (max-width: 768px) {
-  nav {
-    display: none; /* hamburger replaces it */
-  }
-}
 
 /* Base page styles */
 body {
@@ -27,15 +14,16 @@ body {
 header {
   position: sticky;
   top: 0;
+  z-index: 100;
   background-color: #FFFFFF;
   padding: 16px 32px;
-  z-index: 100;
 }
 
 /* Header inner layout */
-header-inner {
+.header-inner {
   display: flex;
   align-items: center;
+  justify-content: space-between
   gap: 32px;
 }
 
@@ -43,7 +31,7 @@ header-inner {
 nav {
   display: flex;
   gap: 24px;
-  align-items: center;
+  /* align-items: center; */
 }
 
 /* Navigation links */
