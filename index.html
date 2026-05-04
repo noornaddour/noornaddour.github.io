@@ -13,41 +13,101 @@
 </head>
 
 <body>
+
 <!-- ---------------------------
-  Body of Home Page
+  0. Header
 --------------------------------->
 <header>
 <!-- Home Page Header: Home, Insights, Industries, Engines, About Us, Careers -->
 
   <nav class="navbar">
+    <!-- Logo -->
     <a href="index.html" class="nav-branding">
-      <img src="assets/images/logo_small.svg" alt="Site Logo">
+      <img src="assets/images/logo_small.svg" text alt="Site Logo">
+      <span class="logo-text">Protothetic</span>  
     </a>
-
+    <!-- Header List -->
     <ul class="nav-menu">
       <li class="nav-item">
-        <a href="#home" class="nav-link">Home</a>
+        <a href="#Home" class="nav-link">Home</a>
       </li>
       <li class="nav-item">
-        <a href="#about" class="nav-link">About</a>
+        <a href="#Insights" class="nav-link">Insights</a>
       </li>
       <li class="nav-item">
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#Industries" class="nav-link">Industries</a>
+      </li>
+      <li class="nav-item">
+        <a href="#Engines" class="nav-link">Engines</a>
+      </li>
+      <li class="nav-item">
+        <a href="#About us" class="nav-link">About us</a>
+      </li>
+      <li class="nav-item">
+        <a href="#Careers" class="nav-link">Careers</a>
       </li>
     </ul>
-
+    <!-- Mobile-Friendly Hamburger Button -->	
     <div class="hamburger">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
   </nav>
+
 </header>
-
-<section id="home"><h1>Home</h1></section>
-<section id="about"><h1>About</h1></section>
-<section id="contact"><h1>Contact</h1></section>
-
 <script src="javascript/header-mobile.js"></script>
+<!-- ---------------------------
+  End of Header
+--------------------------------->
+
+<!-- ---------------------------
+  01. Carousel
+--------------------------------->
+<section style="background-color: #222846;
+                margin-top: 80px;
+                padding: 20px 20px;"
+                id="Home">
+  <div class="carousel">
+    <div class="carousel-track">
+
+      <div class="carousel-slide">
+        <img src="assets/images/dolphin.png" alt="Slide 1">
+        <div class="carousel-caption">
+          <a href="index.html">Slide One</a>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <img src="assets/images/dolphin2.png" alt="Slide 2">
+        <div class="carousel-caption">
+          <a href="index.html">Slide Two</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
+    <button class="carousel-btn next" aria-label="Next slide">&#10095;</button>
+      
+    <!-- Pagination dots -->
+    <div class="carousel-dots"></div>
+  </div>
+
+</section>
+<script src="javascript/carousel.js"></script>
+<!-- ---------------------------
+  End of Carousel
+--------------------------------->
+
+<section style="background-color: #f0f0f0;" id="Insights"><h1>Insights</h1>
+blublu2</section>
+<section style="background-color: #865d5d;" id="Industries"><h1>Industries</h1></section>
+<section style="background-color: #b38c8c;" id="Engines"><h1>Engines</h1></section>
+<section style="background-color: #5b3737;" id="About us"><h1>About us</h1></section>
+<section style="background-color: #f0f0f0;" id="Careers"><h1>Careers</h1></section>
+
+
 </body>
 </html>
