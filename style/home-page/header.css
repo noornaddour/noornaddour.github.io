@@ -1,103 +1,102 @@
-/* Enable smooth in-page scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-
-/* Base page styles */
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: "Times New Roman", Times, serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Header container */
+/* Header background */
 header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: #ffffff;
-  padding: 16px 32px;
+  background-color: #795d5d;
 }
 
-/* Header inner layout */
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
+/* List items */
+li {
+  list-style: none;
 }
 
-/* Navigation layout */
-nav {
-  display: flex;
-  gap: 24px;
-  /* align-items: center; */
-}
-
-/* Navigation links */
-nav a {
-  color: #222846;
+/* Links */
+a {
+  color: #1e9c3f;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
 }
 
-/* Hover state */
-nav a:hover {
-  text-decoration: underline;
+/* Navbar container */
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
 }
 
-/* Logo */
-.logo img {
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px; /* ✅ unit added */
+}
+
+.nav-branding img {
   height: 36px;
   display: block;
 }
 
-/* Reset button styles */
-.menu-toggle {
-  display: none; /* Hidden on desktop */
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  width: 30px;
-  height: 20px;
-  flex-direction: column;
-  justify-content: space-between;
+.nav-links {
+    transition: 0.7s ease;
 }
 
-@media (max-width: 768px) {
-  .header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding: 15px;
-  }
+.nav-link:hover{
+    color: #571199;
+}
 
-  .menu-toggle {
-    display: flex; /* Show on mobile */
-    z-index: 1001;
-  }
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
 
-  /* Style for the 3 individual lines */
-  .menu-toggle span {
-    display: block;
-    width: 100%;
+.bar{
+    display:block;
+    width: 25px;
     height: 3px;
-    background-color: #333; /* Line color */
-    border-radius: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-  }
+    background-color: #1ad67b;
+}
 
-  /* Animation to 'X' when active */
-  .menu-toggle.active span:nth-child(1) {
-    transform: translateY(8.5px) rotate(45deg);
-  }
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-toggle.active span:nth-child(3) {
-    transform: translateY(-8.5px) rotate(-45deg);
-  }
+@media(max-width: 768px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        gap: 0;
+        width: 100%;
+        background-color: #141439a5;
+        flex-direction: column;
+        text-align: center;
+        transition: 0.3s
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        right: 0;
+    }
 }
